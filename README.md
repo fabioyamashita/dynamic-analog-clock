@@ -3,7 +3,7 @@ An analog clock built with HTML, CSS and JavaScript (Vanilla JS) with some custo
 
 # Features
 
-- Showing current time by default
+- Show current time by default
 - Choose a custom start time
   - Select a speed (1x, 2x, 5x, 10x)
   - Stop custom time and go back to current time
