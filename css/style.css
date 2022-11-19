@@ -1,0 +1,301 @@
+/* ----------------------- */
+/* GENERAL */
+:root {
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --clr-text-default: #212529;
+  --clr-text-white: #f8f9fa;
+  --clr-bg-default: var(--clr-text-white);
+  --clr-bg-hover: #afafaf;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family);
+  color: var(--clr-text-default);
+}
+
+body {
+  background: rgb(209, 209, 209);
+  background: linear-gradient(
+    0deg,
+    rgba(209, 209, 209, 1) 0%,
+    rgba(240, 240, 240, 1) 100%
+  );
+
+  display: flex;
+}
+
+/* CUSTOM HOUR INPUT */
+.select-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-hour-text {
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.input-hour {
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+
+  padding: 0 0.4rem;
+  background-color: var(--clr-bg-default);
+  border: 1px solid var(--clr-text-default);
+}
+
+.input-hour:disabled {
+  background-color: #eeeeee;
+}
+
+.btn-submit {
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 2rem;
+
+  border: 1px solid var(--clr-border);
+  border-radius: 0.5rem;
+  background: var(--clr-text-default);
+  color: #f8f9fa;
+
+  font-size: 1.6rem;
+  text-transform: uppercase;
+
+  transition: all 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #212529d8;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* CLOCK */
+.clock-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 4rem;
+}
+
+.clock {
+  background-color: var(--clr-bg-default);
+  width: 40rem;
+  height: 40rem;
+
+  border-radius: 50%;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0.3rem solid var(--clr-text-default);
+}
+
+.clock-hour {
+  font-size: 2.4rem;
+  font-weight: bold;
+
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  text-align: center;
+}
+
+.dot-center {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--clr-text-default);
+
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.clock-info {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* POINTERS */
+.pointer {
+  position: absolute;
+  transform-origin: bottom;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: var(--clr-text-default);
+  transform: translateY(-50%);
+}
+
+.pointer.hour {
+  width: 0.8rem;
+  height: 32%;
+  z-index: 3;
+  /* transform: translateY(-50%) rotate(180deg); */
+}
+
+.pointer.minute {
+  width: 0.6rem;
+  height: 42%;
+  z-index: 2;
+  /* transform: translateY(-50%) rotate(30deg); */
+}
+
+.pointer.second {
+  width: 0.2rem;
+  height: 47%;
+  background-color: red;
+  z-index: 1;
+  /* transform: translateY(-50%) rotate(15deg); */
+}
+
+/* NUMBERS */
+.hour--1 {
+  transform: rotate(30deg);
+}
+.hour--1--text {
+  transform: rotate(-30deg);
+}
+
+.hour--2 {
+  transform: rotate(60deg);
+}
+.hour--2--text {
+  transform: rotate(-60deg);
+}
+
+.hour--3 {
+  transform: rotate(90deg);
+}
+.hour--3--text {
+  transform: rotate(-90deg);
+}
+
+.hour--4 {
+  transform: rotate(120deg);
+}
+.hour--4--text {
+  transform: rotate(-120deg);
+}
+
+.hour--5 {
+  transform: rotate(150deg);
+}
+.hour--5--text {
+  transform: rotate(-150deg);
+}
+
+.hour--6 {
+  transform: rotate(180deg);
+}
+.hour--6--text {
+  transform: rotate(-180deg);
+}
+
+.hour--7 {
+  transform: rotate(210deg);
+}
+.hour--7--text {
+  transform: rotate(-210deg);
+}
+
+.hour--8 {
+  transform: rotate(240deg);
+}
+.hour--8--text {
+  transform: rotate(-240deg);
+}
+
+.hour--9 {
+  transform: rotate(270deg);
+}
+.hour--9--text {
+  transform: rotate(-270deg);
+}
+
+.hour--10 {
+  transform: rotate(300deg);
+}
+.hour--10--text {
+  transform: rotate(-300deg);
+}
+
+.hour--11 {
+  transform: rotate(330deg);
+}
+.hour--11--text {
+  transform: rotate(-330deg);
+}
+
+/* SPEED CONTAINER */
+.custom-clock-speed {
+  font-family: var(--font-family);
+  font-weight: bold;
+
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: var(--clr-bg-default);
+  border: 1px solid var(--clr-text-default);
+  border-radius: 10px;
+
+  padding: 1.4rem 3rem;
+}
+
+.speed-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.4rem;
+}
+
+.btn-speed {
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 1.6rem;
+
+  padding: 0.2rem 0.8rem;
+  border: 1px solid var(--clr-text-default);
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-speed:hover {
+  background-color: var(--clr-bg-hover);
+}
+
+.active {
+  background-color: var(--clr-text-default);
+  color: var(--clr-text-white);
+
+  transform: scale(1.2);
+}
+
+.active:hover {
+  background-color: var(--clr-text-default);
+}

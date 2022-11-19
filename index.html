@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Fabio Yamashita" />
+    <meta name="description" content="Clock Exercise" />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/script.js" defer></script>
+    <title>Dynamic Clock</title>
+  </head>
+  <body>
+    <section class="clock-section">
+      <div class="select-options">
+        <div class="input-box">
+          <label class="input-hour-text" for="input-hour">Start time</label>
+          <input
+            type="time"
+            class="input-hour"
+            id="input-hour"
+            name="input-hour"
+            required
+          />
+        </div>
+
+        <button class="btn-submit custom-clock--off">Start Custom Clock</button>
+        <button class="btn-submit custom-clock--on hidden">
+          Stop Custom Clock
+        </button>
+      </div>
+      <div class="clock">
+        <div class="dot-center"></div>
+        <div class="pointer hour"></div>
+        <div class="pointer minute"></div>
+        <div class="pointer second"></div>
+        <div class="clock-hour hour--1">
+          <div class="hour--1--text">1</div>
+        </div>
+        <div class="clock-hour hour--2">
+          <div class="hour--2--text">2</div>
+        </div>
+        <div class="clock-hour hour--3">
+          <div class="hour--3--text">3</div>
+        </div>
+        <div class="clock-hour hour--4">
+          <div class="hour--4--text">4</div>
+        </div>
+        <div class="clock-hour hour--5">
+          <div class="hour--5--text">5</div>
+        </div>
+        <div class="clock-hour hour--6">
+          <div class="hour--6--text">6</div>
+        </div>
+        <div class="clock-hour hour--7">
+          <div class="hour--7--text">7</div>
+        </div>
+        <div class="clock-hour hour--8">
+          <div class="hour--8--text">8</div>
+        </div>
+        <div class="clock-hour hour--9">
+          <div class="hour--9--text">9</div>
+        </div>
+        <div class="clock-hour hour--10">
+          <div class="hour--10--text">10</div>
+        </div>
+        <div class="clock-hour hour--11">
+          <div class="hour--11--text">11</div>
+        </div>
+        <div class="clock-hour hour--12">
+          <div class="hour--12--text">12</div>
+        </div>
+      </div>
+      <div class="clock-info">Showing Current Time</div>
+      <div class="custom-clock-speed hidden">
+        <p>Speed</p>
+        <ul class="speed-list">
+          <li class="speed-item">
+            <button class="btn-speed speed--1x active" data-clock-speed="1">
+              1x
+            </button>
+          </li>
+          <li class="speed-item">
+            <button class="btn-speed speed--2x" data-clock-speed="2">2x</button>
+          </li>
+          <li class="speed-item">
+            <button class="btn-speed speed--5x" data-clock-speed="5">5x</button>
+          </li>
+          <li class="speed-item">
+            <button class="btn-speed speed--10x" data-clock-speed="10">
+              10x
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
