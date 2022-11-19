@@ -1,2 +1,2 @@
-# dynamic-analog-clock
-A analog clock built with HTML, CSS and JavaScript (Vanilla JS) with some custom features.
+# Dynamic Analog Clock
+An analog clock built with HTML, CSS and JavaScript (Vanilla JS) with some custom features.
